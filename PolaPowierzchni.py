@@ -1,6 +1,6 @@
 import math
-from multiprocessing.connection import wait
-from pickle import TRUE
+
+
 
 
 def pole_kwadratu(a):
