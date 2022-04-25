@@ -1,4 +1,6 @@
 import math
+import tkinter
+
 
 def pole_kwadratu(a):
     return a * a
