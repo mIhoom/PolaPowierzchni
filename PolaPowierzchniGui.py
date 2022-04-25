@@ -1,6 +1,6 @@
 import math
 import tkinter
-
+from tkinter import *
 
 def pole_kwadratu(a):
     return a * a
@@ -17,6 +17,28 @@ def pole_trojkata(a, h):
 def pole_trapezu(a, b, h):
     return (a + b) / 2 * h
 
+root = tkinter.Tk()
+root.title("Pola Powierzchni by MM")
+root.geometry('500x500')
+root.resizable(width=False, height=False)
+
+tekst = tkinter.Label(root, text = "Wybierz figurę, której pole chcesz obliczyć:", font = 15)
+tekst.place(x = 30, y = 30)
+wybor1 = tkinter.Button(root, command = 1, text = "Kwadrat", font = 10)
+wybor1.place(x = 30, y = 80)
+wybor2 = tkinter.Button(root, command = 1, text = "Prostokąt", font = 10)
+wybor2.place(x = 30, y = 140)
+wybor3 = tkinter.Button(root, command = 1, text = "Koło", font = 10)
+wybor3.place(x = 30, y = 200)
+wybor4 = tkinter.Button(root, command = 1, text = "Trójkąt", font = 10)
+wybor4.place(x = 30, y = 260)
+wybor5 = tkinter.Button(root, command = 1, text = "Trapez", font = 10)
+wybor5.place(x = 30, y = 320)
+
+
+
+
+
 wybor = input("""Wybierz figurę, której pole chcesz obliczyć:
 1. Kwadrat
 2. Prostokąt
@@ -24,28 +46,9 @@ wybor = input("""Wybierz figurę, której pole chcesz obliczyć:
 4. Trójkąt
 5. Trapez
 """)
-while True:
-    if wybor == '1':
-        a = float(input("Podaj bok kwadratu:" ))
-        print("Pole kwadratu wynosi:", pole_kwadratu(a))
-    
-    if wybor =='2':
-        a = float(input("Podaj pierwszy bok prostokąta:"))
-        b = float(input("Podaj drugi bok prostokąta:"))
-        print("Pole prostokąta wynosi:", pole_prostokata(a, b))
-    
-    if wybor == '3':
-        r = float(input("Podaj promień koła:"))
-        print("Pole koła wynosi:", pole_kola(r))
-    
-    if wybor == '4':
-        a = float(input("Podaj bok trójkąta:"))
-        h = float(input("podaj wysokość trójkąta:"))
-        print("Pole trójkąta wynosi:", pole_trojkata(a, h))
-    
-    if wybor == '5':
-        a = float(input("Podaj pierwszy bok trapezu:"))
-        b = float(input("Podaj drugi bok trapezu:"))
-        h = float(input("Podaj wysokość trapezu:"))
-        print("Pole trapezu wynosi:", pole_trapezu(a, b, h))
-            
+
+
+
+
+
+root.mainloop()
