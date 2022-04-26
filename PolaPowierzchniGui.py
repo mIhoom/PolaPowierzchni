@@ -2,6 +2,7 @@ import math
 import tkinter
 from tkinter import *
 
+
 def pole_kwadratu(a):
     return a * a
     
@@ -28,7 +29,7 @@ tekst = tkinter.Label(root, text = "Wybierz figurę, której pole chcesz obliczy
 tekst.place(x = 10, y = 10)
 
 # Dane dotyczące kwadratu
-wybor1 = tkinter.Button(root, text = "Kwadrat", font = 10)
+wybor1 = tkinter.Button(root, text = "Kwadrat", font = 10,)
 wybor1.place(x = 30, y = 80)
 wybor1a = tkinter.Entry(root, width = 5) 
 wybor1a.place(x =300, y = 86)
@@ -84,8 +85,10 @@ wybor5f = tkinter.Label(root, text = "h", font = 10)
 wybor5f.place(x = 380, y = 324)
 
 #Wyniki obliczeń
-wynik_kwadrat = tkinter.Button(root, font = 20)
-wynik_kwadrat.place(x = 30, y = 400)
+wynik = tkinter.Label(root, font = 20, fg = "green", width = 20, height = 3)
+wynik.place(x = 118, y = 410)
+wynik1 = tkinter.Label(root, font = 10, text = "Pole powierzchni figury wynosi: ")
+wynik1.place(x = 90 ,y = 380)
 
 #Uruchomienie cłości
 root.mainloop()
